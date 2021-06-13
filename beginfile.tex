@@ -1,0 +1,114 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}%支持粗体
+\usepackage{floatflt}
+\usepackage{verbatim}
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{tikz} 
+\usepackage{fancyhdr} 
+\usepackage{ctex}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}   % 图片支持
+\usepackage{float}      % 图片强制放置
+\usepackage{xcolor}     % 代码着色
+\usepackage{listings}   % 代码支持
+\usepackage{indentfirst}% 首行缩进
+\usepackage{titlesec}   % 设置标题
+\usepackage{zhnumber}   % 设置中文section序号
+\usepackage{amsmath,amssymb}    % 数学公式
+\usepackage{enumerate, enumitem}
+\usepackage{fancybox}
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+% 页边距调整
+\geometry{a4paper,left=2.54cm,right=1.5cm,top=2cm,bottom=2.54cm}
+% 设置section和subsection
+\renewcommand{\thesection}{\zhnum{section}}
+\titleformat*{\section}{\Large\bfseries\songti}
+\titleformat*{\subsection}{\large\bfseries\songti}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+% 行距调整
+\renewcommand{\baselinestretch}{1.5}
+%\setlength{\abovecaptionskip}{-0.5em} 
+%\setlength{\belowcaptionskip}{-0.5em}  
+\setlength{\baselineskip}{10pt}
+\setlength{\lineskiplimit}{1pt}
+\setlength{\parskip}{0pt}
+% 首行缩进
+\setlength{\parindent}{2em}
+% 代码块命令
+\definecolor{codeBgColor}{RGB}{249, 242, 244}
+\definecolor{codeTextColor}{RGB}{202, 37, 78}
+\newcommand{\linecode}[1]{
+	\begingroup
+	\sethlcolor{codeBgColor}
+	\fontsize{9pt}{\baselineskip}\ttfamily\textcolor{codeTextColor}{\hl{\,#1\,}}
+	\endgroup
+}
+\newcommand{\boldit}[1]{\textbf{\textit{#1}}}
+
+\fancyput(-1.3cm,-12.5cm){\rotatebox[origin=c]{90}{\parbox{26cm}{\centering
+	\zihao{5}  
+	\dotfill{}
+	\rotatebox[x=0.3\ccwd,y=0.5\ccwd]{-90}{ 线}   \qquad  
+	\rotatebox[x=0\ccwd,y=0.5\ccwd]{-90}{订} \qquad   
+	\rotatebox[x=0\ccwd,y=0.5\ccwd]{-90}{装}
+	\dotfill{}  
+	\\}}}
+
+\pagestyle{plain}
+\fancyhf{}
+\cfoot{\thepage}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\chead{\vspace{1em}\parbox{\linewidth}{
+	课程名称：\underline{\hbox to 0.31\linewidth{\hfill \CourseName \hfill}}
+	姓名：\underline{\hbox to 0.16\linewidth{\hfill \StudentName \hfill}}
+	学号：\underline{\hbox to 0.16\linewidth{\hfill \StudentID \hfill}}
+}}
+\rfoot{}
+\cfoot{\thepage}
+
+\begin{document}
+	\thispagestyle{plain}
+	\vspace{-4ex}
+	\begin{figure}[h]
+		\centering
+		\qquad\qquad\qquad
+		\includegraphics[width=8cm]{../logo.png}
+		\qquad\qquad\qquad
+		\parbox[b]{4cm}{
+			专业：\underline{\hbox to 0.75\linewidth{\hfill \Major \hfill}}\\
+
+			\vspace{-1.5ex}
+			姓名：\underline{\hbox to 0.75\linewidth{\hfill \StudentName \hfill}}\\
+
+			\vspace{-1.5ex}
+			学号：\underline{\hbox to 0.75\linewidth{\hfill \StudentID \hfill}}\\
+
+			\vspace{-1.5ex}
+			日期：\underline{\hbox to 0.75\linewidth{\hfill \Date \hfill}}\\
+
+			\vspace{-1.5ex}
+			地点：\underline{\hbox to 0.75\linewidth{\hfill \Address \hfill}}\\
+		}
+	\end{figure}
+%\vspace{-1em}
+\hspace{-2em}
+\parbox{\linewidth}{
+	课程名称：\underline{\hbox to 0.33\linewidth{\hfill \CourseName \hfill}}
+	指导老师：\underline{\hbox to 0.18\linewidth{\hfill \Teacher \hfill}}
+	成绩：\underline{\hbox to 0.18\linewidth{\hfill \hfill}}\\
+	实验名称：\underline{\hbox to 0.5\linewidth{\hfill \ProjectName \hfill}}
+	实验类型：\underline{\hbox to 0.18\linewidth{\hfill \ProjectType \hfill}}
+}
+
