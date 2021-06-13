@@ -1,16 +1,14 @@
-# zju_report
+# 实验报告模板
 
-自用的实验报告模板
-
-# 如何使用
+## 如何使用
 
 每次实验报告复制`template`文件夹，编辑该文件夹下的`main.tex`写实验报告。
 
-# 关于`beginfile.tex`
+## 关于`beginfile.tex`
 
 考虑到同一门课程的实验报告格式基本统一，将正文之前的设置部分全部放入`beginfile.tex`，如果需要修改页面格式/添加package，请编辑该文档。
 
-# 关于`resize.py`和`contrast.py`
+## 关于`resize.py`和`contrast.py`
 
 在`template`文件夹下，有`resize.py`和`contrast.py`两个python文件。
 
@@ -24,7 +22,7 @@
 
 tips：在实验拍波形的时候可以用文档扫描拍，会自动裁剪。
 
-# 写报告时可能用到的一些代码示例
+## 写报告时可能用到的一些代码示例
 
 - 插入单张图片
 ```latex
