@@ -20,7 +20,7 @@
 
 （两个代码基本是从网上抄来改的……我也不懂）
 
-tips：在实验拍波形的时候可以用手机自带的文档扫描拍，会自动裁剪。
+tips：在实验拍波形的时候可以用手机相机自带的文档扫描拍，会自动裁剪。
 
 ## 写报告时可能用到的一些代码示例
 
@@ -51,7 +51,7 @@ tips：在实验拍波形的时候可以用手机自带的文档扫描拍，会�
 ```latex
 \hspace{-2.8em}\begin{tabular}{l l}
 	\begin{minipage}{0.6\textwidth}
-	  左列内容
+		左列内容
 	\end{minipage}
 	&
 	\begin{minipage}{0.4\textwidth}
